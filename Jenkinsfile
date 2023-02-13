@@ -1,11 +1,11 @@
 pipeline {
     stages {
-        stage('Build') {
+        stage("Build") {
             steps {
                 echo "Building" && make
             }
         }
-        stage('Test') {
+        stage("Test") {
             steps {
                 echo "Testing" && ./hello_exec
             }
