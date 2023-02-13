@@ -12,7 +12,7 @@ pipeline {
             }
             post {
                 failure {
-                    echo 'Test stage failed. Notifying developers...'
+                    echo 'pipeline failed: testing stage'
                 }
             }
         }
