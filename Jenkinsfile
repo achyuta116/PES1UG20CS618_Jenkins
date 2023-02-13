@@ -2,7 +2,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                make
+                build job: 'PES1UG20CS618-1' 
             }
         }
         stage('Test') {
