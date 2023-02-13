@@ -7,7 +7,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                ./hello_exec
+                build job: 'PES1UG20CS618-2'
             }
             post {
                 failure {
