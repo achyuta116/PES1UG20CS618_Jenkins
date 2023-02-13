@@ -1,21 +1,20 @@
 pipeline {
     stages {
-        stage("Build") {
+        stage('Build') {
             steps {
-                echo "Building" && make
+                make
             }
         }
-        stage("Test") {
+        stage('Test') {
             steps {
-                echo "Testing" && ./hello_exec
+                ./hello_exec
             }
             post {
                 failure {
-                    echo "Test stage failed. Notifying developers..."
+                    echo 'Test stage failed. Notifying developers...'
                 }
             }
         }
     }
 }
-
 
